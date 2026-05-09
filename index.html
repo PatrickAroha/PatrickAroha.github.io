@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patrick Aroha - Unreal Engine Developer</title>
+  <meta name="description" content="Portfolio of Patrick Aroha, Unreal Engine developer focused on C++, GAS, multiplayer, replication, UI and gameplay systems." />
+  <meta property="og:title" content="Patrick Aroha - Unreal Engine Developer" />
+  <meta property="og:description" content="Unreal Engine portfolio focused on C++, GAS, multiplayer and gameplay systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/preview.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="profile-art">
+          <img src="assets/images/profile.png" alt="Patrick Aroha profile photo" class="avatar" />
+          <img src="assets/images/banner.png" alt="Unreal Engine logo" class="mini-banner" />
+        </div>
+
+        <h1>Patrick Aroha</h1>
+        <p class="role">Unreal Engine Developer</p>
+        <div class="accent-line"></div>
+
+        <p class="bio">
+          Gameplay programmer specialized in Unreal Engine, C++, GAS and multiplayer systems.
+          I build replicated gameplay features, inventory architecture, combat systems, UI flows and scalable game frameworks.
+        </p>
+
+        <section class="side-section">
+          <div class="section-title"><span>✦</span> Skills</div>
+          <div class="skill-grid">
+            <span>C++</span>
+            <span>GAS</span>
+            <span>Multiplayer</span>
+            <span>Framework</span>
+            <span>AI Systems</span>
+            <span>Optimization</span>
+          </div>
+        </section>
+
+        <section class="side-section">
+          <div class="section-title"><span>✉</span> Contact</div>
+
+          <div class="contact-grid">
+            <button type="button" onclick="showContact('LinkedIn', 'https://www.linkedin.com/in/patrick-aroha-velasco-borges-7926b3258/')">
+              LinkedIn
+            </button>
+
+            <button type="button" onclick="showContact('Email', 'Patrickaroha3@gmail.com')">
+              Email
+            </button>
+
+            <button type="button" onclick="showContact('Discord', 'aroha0431')">
+              Discord
+            </button>
+          </div>
+        </section>
+      </div>
+    </aside>
+
+    <div class="vertical-divider" aria-hidden="true"></div>
+
+    <main class="content">
+      <header class="content-header">
+        <div class="title-row">
+          <span class="star">☆</span>
+          <h2>Featured Projects</h2>
+          <div class="glow-line"></div>
+        </div>
+      </header>
+
+      <section class="projects-grid">
+        <article class="project-card">
+          <button class="media-button" data-video="assets/videos/rabbit-fights.mp4" aria-label="Play Rabbit Fights demo">
+            <img src="assets/images/rabbit-fights.jpg" alt="Rabbit Fights gameplay thumbnail" />
+            <span class="play">▶</span>
+          </button>
+          <div class="card-body">
+            <h3>Rabbit Fights</h3>
+            <p>Fast-paced multiplayer arena fighter featuring unique rabbit characters, items and magic abilities.</p>
+            <div class="tags"><span>C++</span><span>GAS</span><span>Multiplayer</span><span>UI</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button class="media-button" data-video="assets/videos/candy-adventure.mp4" aria-label="Play The Candy Adventure demo">
+            <img src="assets/images/candy-adventure.jpg" alt="The Candy Adventure gameplay thumbnail" />
+            <span class="play">▶</span>
+          </button>
+          <div class="card-body">
+            <h3>The Candy Adventure</h3>
+            <p>Whimsical 3D platformer built in Unreal Engine with collectables, puzzles and a vibrant world full of secrets.</p>
+            <div class="tags"><span>Unreal Engine</span><span>C++</span><span>Blueprints</span><span>UI</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button class="media-button" data-video="assets/videos/movement-system.mp4" aria-label="Play Movement System demo">
+            <img src="assets/images/movement-system.jpg" alt="Movement system prototype thumbnail" />
+            <span class="play">▶</span>
+          </button>
+          <div class="card-body">
+            <h3>Movement System Prototype</h3>
+            <p>Advanced movement system prototype with dash, mantle, slide, wall-run and contextual movement features.</p>
+            <div class="tags"><span>C++</span><span>Blueprints</span><span>Movement</span><span>UI</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button class="media-button" data-video="assets/videos/combat-prototype.mp4" aria-label="Play Combat Prototype demo">
+            <img src="assets/images/combat-prototype.jpg" alt="Combat prototype thumbnail" />
+            <span class="play">▶</span>
+          </button>
+          <div class="card-body">
+            <h3>Combat Prototype</h3>
+            <p>Melee combat prototype with combo system, blocking, parrying, hit reactions and weapon variety.</p>
+            <div class="tags"><span>C++</span><span>GAS</span><span>Animation</span><span>UI</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button class="media-button" data-video="assets/videos/gas-skill-demo.mp4" aria-label="Play GAS Skill Demo">
+            <img src="assets/images/gas-skill-demo.jpg" alt="GAS skill demo thumbnail" />
+            <span class="play">▶</span>
+          </button>
+          <div class="card-body">
+            <h3>GAS Skill Demo</h3>
+            <p>Gameplay Ability System showcase with abilities, buffs, cooldowns, attributes and combat effects.</p>
+            <div class="tags"><span>GAS</span><span>C++</span><span>Gameplay</span><span>UI</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button class="media-button" data-video="assets/videos/multiplayer-systems.mp4" aria-label="Play Multiplayer Systems demo">
+            <img src="assets/images/multiplayer-systems.jpg" alt="Multiplayer systems thumbnail" />
+            <span class="play">▶</span>
+          </button>
+          <div class="card-body">
+            <h3>Multiplayer Systems</h3>
+            <p>Multiplayer framework featuring replication, client prediction, lag handling and session management.</p>
+            <div class="tags"><span>C++</span><span>Networking</span><span>Replication</span><span>UI</span></div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-content">
+      <button class="close-modal" data-close aria-label="Close video">×</button>
+      <video id="projectVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    function showContact(type, value) {
+      alert(type + ": " + value);
+    }
+  </script>
+</body>
+</html>
