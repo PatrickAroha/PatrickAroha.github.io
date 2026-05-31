@@ -46,20 +46,31 @@ body::before {
 .page-shell {
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 430px 1px minmax(0, 1fr);
+  display: block;
   overflow: hidden;
 }
 
-/* LEFT SIDE */
+/* LEFT SIDE FIXED */
 .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+
+  width: 430px;
   height: 100vh;
   overflow: hidden;
   padding: 28px 30px 40px;
+
   background: linear-gradient(180deg, rgba(6, 2, 8, 0.96), rgba(5, 4, 12, 0.86));
 }
 
 .vertical-divider {
+  position: fixed;
+  left: 430px;
+  top: 0;
+  z-index: 6;
+
   width: 1px;
   height: 100vh;
   background: rgba(168, 85, 247, 0.45);
@@ -206,6 +217,8 @@ h1 {
 
 /* RIGHT SIDE */
 .content {
+  margin-left: 431px;
+  width: calc(100vw - 431px);
   min-width: 0;
   height: 100vh;
   padding: 42px 46px 0;
@@ -256,17 +269,17 @@ h2 {
   overflow-x: hidden;
 
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(340px, 400px));
   justify-content: space-evenly;
   align-content: start;
 
   row-gap: 50px;
-  column-gap: 0;
+  column-gap: 24px;
 
   width: 100%;
   padding-top: 12px;
   margin-top: -12px;
-  padding-right: 0;
+  padding-right: 6px;
   padding-bottom: 100px;
 }
 
@@ -295,6 +308,7 @@ h2 {
 
 /* PROJECT CARDS */
 .project-card {
+  width: 100%;
   min-height: 450px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -451,7 +465,7 @@ h3 {
 }
 
 /* RESPONSIVE */
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   body {
     height: auto;
     overflow: auto;
@@ -460,19 +474,23 @@ h3 {
   .page-shell {
     height: auto;
     min-height: 100vh;
-    grid-template-columns: 1fr;
+    display: block;
     overflow: visible;
   }
 
-  .vertical-divider {
-    display: none;
-  }
-
   .sidebar {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
     height: auto;
     overflow: visible;
     border-right: 0;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .vertical-divider {
+    display: none;
   }
 
   .profile-card {
@@ -481,6 +499,8 @@ h3 {
   }
 
   .content {
+    margin-left: 0;
+    width: 100%;
     height: auto;
     overflow: visible;
     padding: 48px 48px 70px;
@@ -502,7 +522,8 @@ h3 {
   }
 
   .profile-art {
-    height: 260px;
+    display: block;
+    height: auto;
   }
 
   .mini-banner {
@@ -512,6 +533,7 @@ h3 {
   .avatar {
     position: static;
     width: 100%;
+    max-width: none;
     height: 260px;
     border-radius: 16px;
   }
